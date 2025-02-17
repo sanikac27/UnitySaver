@@ -1,0 +1,276 @@
+/* help.css - Combined and updated styles */
+
+.help-page {
+  min-height: 100vh;
+  background-color: #1e293b;
+  padding: 3rem 1rem;
+  padding-top: 100px; /* Increased padding to account for fixed header */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.help-header {
+  margin-bottom: 2rem;
+}
+
+/* Financial Tools Section */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tool-card {
+  background-color: #475569;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+  background-color: #334155;
+  transform: translateY(-2px);
+}
+
+.tool-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tool-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #06b6d4;
+}
+
+.tool-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tool-description {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.tool-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #06b6d4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.tool-link:hover {
+  color: #0891b2;
+}
+
+/* Remove search container styles since we're removing the search bar */
+.search-container {
+  display: none;
+}
+
+/* Card Styles */
+.card {
+  background-color: #2d3748;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #06b6d4;
+}
+
+.card-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+/* FAQ Section */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #475569;
+  padding-bottom: 1rem;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.faq-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #94a3b8;
+}
+
+.faq-answer {
+  margin-top: 0.5rem;
+  color: #94a3b8;
+}
+
+/* Guides Section */
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.guide-card {
+  background-color: #475569;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.guide-card:hover {
+  background-color: #1e293b;
+}
+
+.guide-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.guide-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+.guide-title {
+  color: white;
+  font-weight: 500;
+  margin: 0;
+}
+
+.guide-description {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+
+/* Contact Support Section */
+.contact-container {
+  max-width: 32rem;
+}
+
+.contact-text {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.contact-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .contact-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #06b6d4;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0891b2;
+}
+
+.btn-secondary {
+  background-color: #475569;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #334155;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .guides-grid,
+  .tutorials-grid,
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}

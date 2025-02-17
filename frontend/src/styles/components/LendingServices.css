@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes formSuccess {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@layer components {
+  /* Animation utility classes */
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  .animate-slideIn {
+    animation: slideIn 0.5s ease-out;
+  }
+
+  /* Chart customizations */
+  .recharts-tooltip {
+    @apply bg-slate-900/90 border border-slate-600 rounded-lg p-2 shadow-lg;
+  }
+
+  .recharts-tooltip-label {
+    @apply text-slate-200 mb-1 font-semibold;
+  }
+
+  .recharts-tooltip-item {
+    @apply text-slate-100 py-1;
+  }
+
+  .recharts-legend-item {
+    @apply text-slate-200;
+  }
+
+  /* Card hover effects */
+  .dashboard-card {
+    @apply bg-slate-800 border-none rounded-lg transition-all duration-300;
+  }
+
+  .dashboard-card:hover {
+    @apply transform scale-105 shadow-xl;
+  }
+
+  /* Status indicators */
+  .status-indicator {
+    @apply w-2 h-2 rounded-full inline-block mr-2;
+  }
+
+  .status-indicator.active {
+    @apply bg-green-500 shadow-lg shadow-green-500/20;
+  }
+
+  .status-indicator.pending {
+    @apply bg-yellow-500 shadow-lg shadow-yellow-500/20;
+  }
+
+  .status-indicator.completed {
+    @apply bg-blue-500 shadow-lg shadow-blue-500/20;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply bg-cyan-400 text-white px-6 py-3 rounded-lg font-medium 
+           transition-all duration-300 hover:bg-cyan-500 hover:scale-105 
+           focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 
+           focus:ring-offset-slate-800
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-700 text-white px-4 py-2 rounded-lg 
+           transition-all duration-300 hover:bg-slate-600 hover:scale-105
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  /* Trust score indicator */
+  .trust-score {
+    @apply inline-flex items-center px-2 py-1 rounded-full text-sm font-medium;
+  }
+
+  .trust-score-high {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .trust-score-medium {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .trust-score-low {
+    @apply bg-red-100 text-red-800;
+  }
+
+  /* Table styles */
+  .table-container {
+    @apply w-full overflow-x-auto;
+  }
+
+  .data-table {
+    @apply min-w-full divide-y divide-slate-700;
+  }
+
+  .table-header {
+    @apply bg-slate-700 text-left text-sm font-medium text-slate-300 uppercase tracking-wider;
+  }
+
+  .table-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-slate-300;
+  }
+
+  /* Loading states */
+  .loading-skeleton {
+    @apply animate-pulse bg-slate-700 rounded;
+  }
+
+  /* Form styles */
+  .form-input {
+    @apply w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 
+           text-white focus:ring-2 focus:ring-cyan-400 focus:border-transparent 
+           transition-all duration-200 placeholder-slate-400;
+  }
+
+  .form-select {
+    @apply w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 
+           text-white focus:ring-2 focus:ring-cyan-400 focus:border-transparent 
+           transition-all duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-slate-300 mb-1;
+  }
+
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .loan-application-card {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .loan-application-form {
+    @apply space-y-6;
+  }
+
+  .form-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
+  .form-submit-success {
+    animation: formSuccess 0.5s ease-out;
+  }
+
+  .form-input:disabled, .form-select:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  .form-input.error, .form-select.error {
+    @apply border-red-400 focus:ring-red-400;
+  }
+
+  .error-message {
+    @apply text-red-400 text-sm mt-1;
+  }
+
+  .success-message {
+    @apply bg-green-400/10 text-green-400 p-4 rounded-lg flex items-center gap-2;
+  }
+
+  /* Icon styles */
+  .icon-wrapper {
+    @apply flex items-center justify-center w-10 h-10 rounded-full 
+           bg-slate-700 text-cyan-400 transition-all duration-300
+           hover:bg-slate-600;
+  }
+
+  /* Chart container */
+  .chart-container {
+    @apply bg-slate-800 rounded-lg p-4;
+  }
+
+  /* Analytics card */
+  .analytics-card {
+    @apply bg-slate-800 rounded-lg p-6 hover:shadow-xl transition-all duration-300;
+  }
+
+  /* Metric card */
+  .metric-card {
+    @apply bg-slate-800 rounded-lg p-4 hover:shadow-xl transition-all duration-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-800 rounded;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 rounded hover:bg-slate-500 transition-colors duration-200;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chart-container {
+    height: 300px;
+  }
+  
+  .form-grid {
+    @apply grid-cols-1;
+  }
+  
+  .dashboard-card:hover {
+    @apply scale-100;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    @apply bg-white text-black;
+  }
+  
+  .dashboard-card,
+  .analytics-card,
+  .metric-card {
+    @apply shadow-none border border-gray-200 print:break-inside-avoid;
+  }
+}
+
+/* Focus styles for better accessibility */
+:focus-visible {
+  @apply outline-none ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-800;
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .form-input::placeholder {
+    @apply text-slate-500;
+  }
+}

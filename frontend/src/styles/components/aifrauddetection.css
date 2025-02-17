@@ -1,0 +1,181 @@
+.fraud-detection-dashboard {
+    min-height: 100vh;
+    background-color: #0f172a;
+    color: white;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 80px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin: 1rem auto;
+    max-width: 1400px;
+  }
+  
+  @media (min-width: 640px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .stats-card {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+    position: relative;
+    padding: 1rem;
+  }
+  
+  .stats-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(34, 211, 238, 0.3);
+    box-shadow: 0 4px 15px rgba(34, 211, 238, 0.15);
+  }
+  
+  .stats-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .stats-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    color: #22d3ee;
+    margin-bottom: 0.75rem;
+  }
+  
+  .stats-title {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+  }
+  
+  .stats-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0.25rem 0;
+  }
+  
+  .stats-description {
+    color: #94a3b8;
+    font-size: 0.75rem;
+  }
+  
+  .charts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 1rem auto;
+  }
+  
+  @media (min-width: 1024px) {
+    .charts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .chart-card {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    padding: 1.25rem;
+  }
+  
+  .chart-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(34, 211, 238, 0.3);
+    box-shadow: 0 4px 15px rgba(34, 211, 238, 0.15);
+  }
+  
+  .chart-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+  }
+  
+  /* Recharts Customization */
+  .recharts-wrapper {
+    margin: 0 auto;
+  }
+  
+  .recharts-legend-wrapper {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .recharts-legend-item-text {
+    color: #94a3b8 !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    stroke: rgba(255, 255, 255, 0.1);
+  }
+  
+  .recharts-tooltip-wrapper .recharts-default-tooltip {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border: 1px solid rgba(34, 211, 238, 0.3) !important;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(34, 211, 238, 0.15);
+    padding: 0.5rem !important;
+  }
+  
+  .recharts-tooltip-label {
+    color: #fff !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .recharts-tooltip-item {
+    color: #94a3b8 !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .recharts-text {
+    fill: #94a3b8;
+    font-size: 0.75rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .fraud-detection-dashboard {
+      padding: 1rem;
+    }
+  
+    .chart-container {
+      height: 250px;
+    }
+  }

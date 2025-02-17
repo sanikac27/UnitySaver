@@ -1,0 +1,190 @@
+.dashboard {
+    min-height: 100vh;
+    background-color: #0f172a;
+    color: white;
+    padding: 80px;
+}
+
+.dashboard-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stat-card {
+    background: rgba(15, 23, 42, 0.9) !important;
+    border: 1px solid rgba(56, 189, 248, 0.1) !important;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(56, 189, 248, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.1);
+}
+
+.stat-content {
+    padding: 1.5rem !important;
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.stat-icon {
+    padding: 0.75rem;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 0.75rem;
+}
+
+.stat-icon .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #38bdf8;
+}
+
+.stat-change {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.stat-change.positive {
+    color: #34d399;
+}
+
+.stat-change.negative {
+    color: #f87171;
+}
+
+.stat-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-title {
+    font-size: 0.875rem;
+    color: #94a3b8;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.stat-description {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Charts Section */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .charts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.chart-card {
+    background: rgba(15, 23, 42, 0.9) !important;
+    border: 1px solid rgba(56, 189, 248, 0.1) !important;
+    transition: all 0.3s ease;
+    height: 400px;
+}
+
+.chart-card:hover {
+    border-color: rgba(56, 189, 248, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.1);
+}
+
+.chart-title {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    color: white !important;
+    padding: 1.5rem 1.5rem 0 1.5rem !important;
+}
+
+.chart-container {
+    height: 300px;
+    padding: 1rem;
+}
+
+/* Custom Tooltip */
+.custom-tooltip {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.tooltip-label {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.tooltip-value {
+    font-size: 0.875rem;
+    margin: 0.25rem 0;
+}
+
+/* Recharts Customization */
+.recharts-cartesian-grid line {
+    stroke: rgba(148, 163, 184, 0.1);
+}
+
+.recharts-cartesian-axis-line {
+    stroke: rgba(148, 163, 184, 0.2);
+}
+
+.recharts-legend-item-text {
+    color: #94a3b8 !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+    fill: #94a3b8;
+    font-size: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 1rem;
+    }
+    
+    .chart-card {
+        height: 350px;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+}

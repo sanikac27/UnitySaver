@@ -1,0 +1,172 @@
+/* Main Container Styles */
+.settings-page {
+  min-height: 100vh;
+  background-color: #1e1f2d;
+  padding-top: 100px;
+}
+
+.settings-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.settings-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+/* Settings Sections */
+.settings-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card Styles */
+.settings-card {
+  background-color: #2c2f3b;
+  border: none;
+  color: #ffffff;
+}
+
+.settings-card-header {
+  padding: 1.5rem;
+}
+
+.settings-card-content {
+  padding: 1.5rem;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.settings-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #06b6d4;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+/* Settings List */
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual Setting Item */
+.settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.settings-item:hover {
+  background-color: #3b424e;
+}
+
+.setting-info {
+  flex: 1;
+}
+
+.setting-name {
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.setting-description {
+  font-size: 0.875rem;
+  color: #b0b6c1;
+}
+
+/* Icons and Controls */
+.setting-chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #b0b6c1;
+}
+
+.setting-switch {
+  background-color: #3b424e;
+  border-radius: 9999px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 0 1rem;
+  }
+
+  .settings-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .settings-item {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .setting-info {
+    width: 100%;
+  }
+}
+
+/* Switch Component Custom Styling */
+:root {
+  --switch-bg: #3b424e;
+  --switch-active: #06b6d4;
+}
+
+.setting-switch[data-state='checked'] {
+  background-color: var(--switch-active);
+}
+
+.setting-switch[data-state='unchecked'] {
+  background-color: var(--switch-bg);
+}
+
+/* Card Border Radius */
+.settings-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Hover Effects */
+.settings-item:hover .setting-chevron {
+  color: #ffffff;
+}
+
+.settings-item:hover .setting-name {
+  color: #06b6d4;
+}
+
+/* Transitions */
+.settings-item,
+.setting-chevron,
+.setting-name {
+  transition: all 0.2s ease-in-out;
+}

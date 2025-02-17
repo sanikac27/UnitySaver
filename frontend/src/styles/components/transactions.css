@@ -1,0 +1,165 @@
+.transaction-container {
+  padding: 1.5rem;
+  background-color: #0f172a;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+/* Quick Actions Styles */
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .quick-actions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.quick-action-card {
+  background-color: #1e293b;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quick-action-card:hover {
+  background-color: #334155;
+}
+
+.quick-action-content {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.quick-action-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #22d3ee;
+  margin-right: 1rem;
+}
+
+.quick-action-text {
+  color: #ffffff;
+}
+
+.quick-action-text h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.quick-action-text p {
+  color: #94a3b8;
+  margin: 0.25rem 0 0 0;
+}
+
+/* Transaction History Styles */
+.transaction-history-card {
+  background-color: #1e293b;
+  border: none;
+}
+
+.transaction-history-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.transaction-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.action-icon:hover {
+  color: #ffffff;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #334155;
+  border-radius: 0.5rem;
+}
+
+.transaction-details-left {
+  display: flex;
+  align-items: center;
+}
+
+.transaction-info {
+  margin-left: 1rem;
+}
+
+.transaction-type {
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0;
+}
+
+.transaction-account {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+.transaction-date {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.transaction-details-right {
+  text-align: right;
+}
+
+.transaction-amount {
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0;
+}
+
+.transaction-reference {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+.transaction-status {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.transaction-status.completed {
+  color: #4ade80;
+}
+
+.transaction-status.pending {
+  color: #facc15;
+}
+
+.transaction-status.failed {
+  color: #f87171;
+}

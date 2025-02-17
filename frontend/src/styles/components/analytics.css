@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* If you need any custom CSS styles beyond Tailwind, add them here */
+/* However, the current implementation uses only Tailwind classes */
